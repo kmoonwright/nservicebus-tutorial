@@ -1,6 +1,9 @@
 Billing/obj
 ClientUI/obj
+ClientUI/bin
 Messages/obj
+Messages/bin
 Platform/obj
 Sales/obj
+Sales/bin
 .learningtransport
