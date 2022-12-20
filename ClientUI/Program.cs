@@ -32,6 +32,9 @@ namespace ClientUI
                             var metrics = endpointConfiguration.EnableMetrics();
                             metrics.SendMetricDataToServiceControl("Particular.Monitoring", TimeSpan.FromMilliseconds(500));
 
+                            // Enable OpenTelemetry for NserviceBus.Core with .NET 7.0+
+                            endpointConfiguration.EnableOpenTelemetry();
+                            
                             return endpointConfiguration;
 
                         })
