@@ -52,6 +52,7 @@ namespace Sales
                         metrics.SendMetricDataToServiceControl("Particular.Monitoring", TimeSpan.FromMilliseconds(500));
 
                         // Open Telemetry Configurations for Sales Service
+                        endpointConfiguration.EnableOpenTelemetry();
                         var serviceName = "Sales";
                         var serviceVersion = "1.0.0";
                         var APIKey = System.Environment.GetEnvironmentVariable("HONEYCOMB_API_KEY");
