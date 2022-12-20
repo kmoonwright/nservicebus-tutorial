@@ -7,10 +7,13 @@ The solution contains five projects. The ClientUI, Sales, and Billing projects a
 The ClientUI endpoint sends a PlaceOrder command to the Sales endpoint. As a result, the Sales endpoint will publish an OrderPlaced event using the publish/subscribe pattern, which will be received by the Billing endpoint.
 
 The solution mimics a real-life retail system where the command to place an order is sent as a result of customer interaction, and the processing occurs in the background. Publishing an event allows us to further isolate the code to bill the credit card from the code to place the order, reducing coupling and making the system easier to maintain over the long term. Later in this tutorial, we'll see how to add a second subscriber to that event in a new Shipping endpoint which will begin the process of shipping the order.
+
 ### Setup
 OpenTelemetry requires .NET 7.0+
 
 This example is configured to send telemetry data to [Honeycomb](https://honeycomb.io), an team and API Key is required to view telemetry data. Set your API Key to `HONEYCOMB_API_KEY` in each service environment.
+
+Please note this example is not actively maintained, see the original [project](https://docs.particular.net/tutorials/quickstart/) for more information.
 
 ### Run App
 Start each service from their directory using build and run.
